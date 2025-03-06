@@ -11,7 +11,7 @@ class MigrationContentParser extends SchemaParser
     protected function getParsedSchema(SchemaDefinition $schemaDefinition): string
     {
         return collect($schemaDefinition->getColumns())
-            ->map(fn(ColumnDefinition $definition): string => $this->generateColumnDefinition($definition))
+            ->map(fn (ColumnDefinition $definition): string => $this->generateColumnDefinition($definition))
             ->implode(PHP_EOL . "\t\t\t");
     }
 
@@ -46,7 +46,7 @@ class MigrationContentParser extends SchemaParser
     private function getOptionString(array $options): string
     {
         return collect($options)
-            ->map(fn($option) => $this->addOption($option))
+            ->map(fn ($option) => $this->addOption($option))
             ->implode('');
     }
 

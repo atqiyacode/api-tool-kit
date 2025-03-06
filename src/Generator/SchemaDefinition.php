@@ -6,7 +6,9 @@ use Atqiya\APIToolKit\Generator\Exception\SchemaNotValidException;
 
 class SchemaDefinition
 {
-    public function __construct(private array $columns) {}
+    public function __construct(private array $columns)
+    {
+    }
 
     /**
      * Create a SchemaDefinition object from a schema string.
@@ -18,7 +20,7 @@ class SchemaDefinition
      */
     public static function createFromSchemaString(?string $schema): SchemaDefinition
     {
-        if (! $schema) {
+        if ( ! $schema) {
             return new self([]);
         }
 
@@ -50,7 +52,7 @@ class SchemaDefinition
     {
         $pattern = '/^([0-9a-zA-Z_]+:[0-9a-zA-Z(),_]+(:[0-9a-zA-Z(),_\'"]+)?)((\|[0-9a-zA-Z_]+:[0-9a-zA-Z(),_]+(:[0-9a-zA-Z(),_\'"]+)?)*)$/';
 
-        if (! preg_match($pattern, $schema)) {
+        if ( ! preg_match($pattern, $schema)) {
             throw new SchemaNotValidException();
         }
     }

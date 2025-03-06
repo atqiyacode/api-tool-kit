@@ -14,7 +14,8 @@ class QueryFiltersOptionsDTO
         private array $allowedIncludes = [],
         private array $columnSearch = [],
         private array $relationSearch = []
-    ) {}
+    ) {
+    }
 
     public function getAllowedFilters(): array
     {

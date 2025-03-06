@@ -2,9 +2,9 @@
 
 namespace Atqiya\APIToolKit\Tests;
 
-use Carbon\Carbon;
 use Atqiya\APIToolKit\Tests\Mocks\Models\SluggableTestModel;
 use Atqiya\APIToolKit\Tests\Mocks\Models\TestModel;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class FiltersTest extends TestCase
@@ -41,7 +41,7 @@ class FiltersTest extends TestCase
             'name' => 'bbb',
         ]);
 
-        $this->app->bind('request', fn() => new Request([
+        $this->app->bind('request', fn () => new Request([
             'search' => 'a',
         ]));
 
@@ -57,7 +57,7 @@ class FiltersTest extends TestCase
     {
         TestModel::factory(5)->create();
 
-        $this->app->bind('request', fn() => new Request([
+        $this->app->bind('request', fn () => new Request([
             'id' => '2',
         ]));
 
@@ -76,7 +76,7 @@ class FiltersTest extends TestCase
             'created_at' => Carbon::parse('2023-08-02'),
         ]);
 
-        $this->app->bind('request', fn() => new Request([
+        $this->app->bind('request', fn () => new Request([
             'sorts' => 'created_at',
         ]));
 
@@ -97,7 +97,7 @@ class FiltersTest extends TestCase
             'name' => 'Apple',
         ]);
 
-        $this->app->bind('request', fn() => new Request([
+        $this->app->bind('request', fn () => new Request([
             'sorts' => 'name',
         ]));
 
@@ -118,7 +118,7 @@ class FiltersTest extends TestCase
             'name' => 'Apple',
         ]);
 
-        $this->app->bind('request', fn() => new Request([
+        $this->app->bind('request', fn () => new Request([
             'sorts' => '-name',
         ]));
 
@@ -143,7 +143,7 @@ class FiltersTest extends TestCase
             'created_at' => '2022-02-01',
         ]);
 
-        $this->app->bind('request', fn() => new Request([
+        $this->app->bind('request', fn () => new Request([
             'year' => 2022,
         ]));
 
@@ -170,7 +170,7 @@ class FiltersTest extends TestCase
             'test_model_id' => $modelWithRelation->id,
         ]);
 
-        $this->app->bind('request', fn() => new Request([
+        $this->app->bind('request', fn () => new Request([
             'search' => 'ild',
         ]));
 
@@ -191,7 +191,7 @@ class FiltersTest extends TestCase
             'test_model_id' => $model->id,
         ]);
 
-        $this->app->bind('request', fn() => new Request([
+        $this->app->bind('request', fn () => new Request([
             'includes' => 'sluggableTestModel',
         ]));
 

@@ -4,7 +4,9 @@ namespace Atqiya\APIToolKit\Generator;
 
 class ApiGenerationCommandInputs
 {
-    public function __construct(private string $model, private array $userChoices, private SchemaDefinition $schema, private string $pathGroup) {}
+    public function __construct(private string $model, private array $userChoices, private SchemaDefinition $schema, private string $pathGroup)
+    {
+    }
 
     public function getModel(): string
     {

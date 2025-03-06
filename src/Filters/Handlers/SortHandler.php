@@ -2,9 +2,9 @@
 
 namespace Atqiya\APIToolKit\Filters\Handlers;
 
-use Closure;
 use Atqiya\APIToolKit\Filters\Contracts\QueryFiltersHandlerInterface;
 use Atqiya\APIToolKit\Filters\DTO\QueryFiltersOptionsDTO;
+use Closure;
 
 class SortHandler implements QueryFiltersHandlerInterface
 {

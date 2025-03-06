@@ -7,7 +7,9 @@ use Atqiya\APIToolKit\Generator\Contracts\GuesserInterface;
 
 class FactoryMethodGuesserInterface implements GuesserInterface
 {
-    public function __construct(private ColumnDefinition $definition) {}
+    public function __construct(private ColumnDefinition $definition)
+    {
+    }
 
     public function guess(): string
     {

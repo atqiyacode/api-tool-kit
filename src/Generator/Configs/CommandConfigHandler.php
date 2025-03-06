@@ -29,7 +29,7 @@ class CommandConfigHandler
     {
         $commandClass = Config::get("api-tool-kit.api_generator_commands.{$commandName}");
 
-        if (! $commandClass) {
+        if ( ! $commandClass) {
             throw new ConfigNotFoundException("API generator command configuration not found for command: {$commandName}");
         }
 

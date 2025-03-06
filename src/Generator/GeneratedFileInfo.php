@@ -4,7 +4,9 @@ namespace Atqiya\APIToolKit\Generator;
 
 class GeneratedFileInfo
 {
-    public function __construct(private string $fileName, private string $folderPath, private ?string $namespace) {}
+    public function __construct(private string $fileName, private string $folderPath, private ?string $namespace)
+    {
+    }
 
     public function getFileName(): string
     {

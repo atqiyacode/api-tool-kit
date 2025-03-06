@@ -6,7 +6,9 @@ use Atqiya\APIToolKit\Generator\SchemaDefinition;
 
 abstract class SchemaParser
 {
-    public function __construct(private SchemaDefinition $schema) {}
+    public function __construct(private SchemaDefinition $schema)
+    {
+    }
 
     public function parse(): string
     {

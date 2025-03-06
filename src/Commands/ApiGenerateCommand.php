@@ -107,7 +107,7 @@ class ApiGenerateCommand extends Command
             return self::FAILURE;
         }
 
-        if (! PathConfigHandler::isValidPathGroup($this->option('group'))) {
+        if ( ! PathConfigHandler::isValidPathGroup($this->option('group'))) {
             $this->error('The path group you entered is not valid');
 
             return self::FAILURE;

@@ -28,7 +28,7 @@ class StubVariablesProvider
 
     private static function generateReplacementsForType(string $type, GeneratedFileInfo $generatedFileInfo): array
     {
-        if (! $generatedFileInfo->shouldSaveAsSeparateClass()) {
+        if ( ! $generatedFileInfo->shouldSaveAsSeparateClass()) {
             return [];
         }
 

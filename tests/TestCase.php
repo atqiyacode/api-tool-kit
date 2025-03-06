@@ -20,7 +20,7 @@ abstract class TestCase extends OrchestraTestCase
         $this->createRoutesFile();
 
         Factory::guessFactoryNamesUsing(
-            fn(string $modelName) => 'Atqiya\\APIToolKit\\Tests\\database\\factories\\' . class_basename($modelName) . 'Factory'
+            fn (string $modelName) => 'Atqiya\\APIToolKit\\Tests\\database\\factories\\' . class_basename($modelName) . 'Factory'
         );
     }
 
@@ -67,7 +67,7 @@ abstract class TestCase extends OrchestraTestCase
             rmdir($filePath);
         }
 
-        if (! file_exists($filePath)) {
+        if ( ! file_exists($filePath)) {
             touch($filePath);
         }
     }

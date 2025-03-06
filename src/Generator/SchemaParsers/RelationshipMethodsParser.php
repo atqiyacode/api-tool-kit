@@ -11,8 +11,8 @@ class RelationshipMethodsParser extends SchemaParser
     protected function getParsedSchema(SchemaDefinition $schemaDefinition): string
     {
         return collect($schemaDefinition->getColumns())
-            ->filter(fn(ColumnDefinition $definition): bool => $definition->isForeignKey())
-            ->map(fn(ColumnDefinition $definition): string => $this->generateRelationshipMethod($definition))
+            ->filter(fn (ColumnDefinition $definition): bool => $definition->isForeignKey())
+            ->map(fn (ColumnDefinition $definition): string => $this->generateRelationshipMethod($definition))
             ->implode(PHP_EOL);
     }
 

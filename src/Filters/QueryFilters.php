@@ -33,7 +33,9 @@ class QueryFilters
      *
      * @param Pipeline $pipeline The Laravel pipeline instance.
      */
-    public function __construct(private Pipeline $pipeline) {}
+    public function __construct(private Pipeline $pipeline)
+    {
+    }
 
     /**
      * Apply the query filters to the builder.

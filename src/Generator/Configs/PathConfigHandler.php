@@ -35,7 +35,7 @@ class PathConfigHandler
 
         $filePathInfo = $config[$fileType] ?? null;
 
-        if (! $filePathInfo) {
+        if ( ! $filePathInfo) {
             throw new ConfigNotFoundException("File path information not found for type: {$fileType}");
         }
 

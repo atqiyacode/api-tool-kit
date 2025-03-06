@@ -7,7 +7,9 @@ use Atqiya\APIToolKit\Generator\Contracts\GuesserInterface;
 
 class ValidationRuleGuesserInterface implements GuesserInterface
 {
-    public function __construct(private ColumnDefinition $definition, private array $extraValidation) {}
+    public function __construct(private ColumnDefinition $definition, private array $extraValidation)
+    {
+    }
 
     public function guess(): string
     {
@@ -71,7 +73,7 @@ class ValidationRuleGuesserInterface implements GuesserInterface
 
     private function addExtraValidationToTheRules(): array
     {
-        if (! $this->shouldAddNullableRule()) {
+        if ( ! $this->shouldAddNullableRule()) {
             return $this->extraValidation;
         }
 

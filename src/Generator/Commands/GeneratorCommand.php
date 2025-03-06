@@ -23,7 +23,9 @@ abstract class GeneratorCommand implements GeneratorCommandInterface
 
     protected ApiGenerationCommandInputs $apiGenerationCommandInputs;
 
-    public function __construct(protected Filesystem $filesystem) {}
+    public function __construct(protected Filesystem $filesystem)
+    {
+    }
 
     public function run(ApiGenerationCommandInputs $apiGenerationCommandInputs): void
     {
@@ -36,7 +38,7 @@ abstract class GeneratorCommand implements GeneratorCommandInterface
 
     protected function generateFiles(): void
     {
-        if (! file_exists($this->generatedFileInfo()->getFolderPath())) {
+        if ( ! file_exists($this->generatedFileInfo()->getFolderPath())) {
             $this->createFolder();
         }
 

@@ -12,7 +12,7 @@ class FactoryColumnsParser extends SchemaParser
     protected function getParsedSchema(SchemaDefinition $schemaDefinition): string
     {
         return collect($schemaDefinition->getColumns())
-            ->map(fn(ColumnDefinition $definition): string => $this->generateFactoryColumnDefinition($definition))
+            ->map(fn (ColumnDefinition $definition): string => $this->generateFactoryColumnDefinition($definition))
             ->implode(PHP_EOL . "\t\t\t");
     }
 

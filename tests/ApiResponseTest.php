@@ -14,7 +14,7 @@ class ApiResponseTest extends TestCase
 
     public function setUp(): void
     {
-        $this->classThatImplementTheTrait = new class() {
+        $this->classThatImplementTheTrait = new class () {
             use ApiResponse;
         };
 

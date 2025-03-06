@@ -17,7 +17,7 @@ class DynamicPaginateTest extends TestCase
 
         $randomNumber = rand(1, 50);
 
-        $this->app->bind('request', fn() => new Request([
+        $this->app->bind('request', fn () => new Request([
             'per_page' => $randomNumber,
         ]));
 
@@ -34,7 +34,7 @@ class DynamicPaginateTest extends TestCase
     {
         TestModel::factory(50)->create();
 
-        $this->app->bind('request', fn() => new Request([
+        $this->app->bind('request', fn () => new Request([
             'pagination' => 'none',
         ]));
 
@@ -55,7 +55,7 @@ class DynamicPaginateTest extends TestCase
 
         TestModel::factory(30)->create();
 
-        $this->app->bind('request', fn() => new Request());
+        $this->app->bind('request', fn () => new Request());
 
         /** @var LengthAwarePaginator $paginatedRecords */
         $paginatedRecords = TestModel::dynamicPaginate();

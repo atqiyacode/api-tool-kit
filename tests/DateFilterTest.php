@@ -2,8 +2,8 @@
 
 namespace Atqiya\APIToolKit\Tests;
 
-use Carbon\Carbon;
 use Atqiya\APIToolKit\Tests\Mocks\Models\TestModel;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class DateFilterTest extends TestCase
@@ -20,7 +20,7 @@ class DateFilterTest extends TestCase
             'created_at' => Carbon::parse('2023-08-02 14:00:00'),
         ]);
 
-        $this->app->bind('request', fn() => new Request([
+        $this->app->bind('request', fn () => new Request([
             'from_date' => '2023-08-02',
         ]));
 
@@ -41,7 +41,7 @@ class DateFilterTest extends TestCase
             'created_at' => Carbon::parse('2023-08-02 14:00:00'),
         ]);
 
-        $this->app->bind('request', fn() => new Request([
+        $this->app->bind('request', fn () => new Request([
             'to_date' => '2023-08-01',
         ]));
 
@@ -63,7 +63,7 @@ class DateFilterTest extends TestCase
             'created_at' => Carbon::parse('2023-08-02 14:00:00'),
         ]);
 
-        $this->app->bind('request', fn() => new Request([
+        $this->app->bind('request', fn () => new Request([
             'from_date' => '2023-08-01',
             'to_date' => '2023-08-01',
         ]));
@@ -87,7 +87,7 @@ class DateFilterTest extends TestCase
             'created_at' => Carbon::parse('2023-08-02 14:00:00'),
         ]);
 
-        $this->app->bind('request', fn() => new Request([
+        $this->app->bind('request', fn () => new Request([
             'from_date' => '2023-08-01',
             'to_date' => '2023-08-01',
             'from_time' => '11:00:00',

@@ -11,7 +11,8 @@ class FiltersDTO
         private ?array $filters = null,
         private ?array $includes = null,
         private ?string $search = null
-    ) {}
+    ) {
+    }
 
     public static function buildFromRequest(Request $request): FiltersDTO
     {
@@ -65,7 +66,7 @@ class FiltersDTO
 
     public function getFilter(string $key): ?string
     {
-        if (! array_key_exists($key, $this->filters)) {
+        if ( ! array_key_exists($key, $this->filters)) {
             return null;
         }
 

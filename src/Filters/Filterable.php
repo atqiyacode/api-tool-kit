@@ -17,7 +17,7 @@ trait Filterable
         ?string $filterClass = null,
         ?FiltersDTO $filteredDTO = null
     ): Builder {
-        if (! property_exists($this, 'default_filters') && null === $filterClass) {
+        if ( ! property_exists($this, 'default_filters') && null === $filterClass) {
             throw new MissingDefaultFiltersException();
         }
 

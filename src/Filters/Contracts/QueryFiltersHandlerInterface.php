@@ -2,8 +2,8 @@
 
 namespace Atqiya\APIToolKit\Filters\Contracts;
 
-use Closure;
 use Atqiya\APIToolKit\Filters\DTO\QueryFiltersOptionsDTO;
+use Closure;
 
 interface QueryFiltersHandlerInterface
 {
