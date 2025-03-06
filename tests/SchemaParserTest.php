@@ -228,7 +228,7 @@ class SchemaParserTest extends TestCase
         }
     }
 
-    public function schemasProvider(): array
+    public static function schemasProvider(): array
     {
         return [
             ['column1:string|column2:integer|column3:datetime', true],

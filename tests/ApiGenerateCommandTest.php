@@ -66,7 +66,7 @@ class ApiGenerateCommandTest extends TestCase
         }
     }
 
-    public function generatedTypeProvider(): array
+    public static function generatedTypeProvider(): array
     {
         return [
             [GeneratorFilesType::MODEL],
