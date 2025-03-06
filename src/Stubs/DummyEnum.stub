@@ -1,0 +1,12 @@
+<?php
+
+namespace {{DummyEnumNameSpace}};
+
+use Atqiya\APIToolKit\Enum\Enum;
+
+class {{DummyEnum}} extends Enum
+{
+    /**
+     * EXAMPLE public const FOO = 'foo';
+     */
+}
